@@ -1,0 +1,2 @@
+marker_detection
+-DCATKIN_DEVEL_PREFIX=/home/gordon_l1804/detection_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gordon_l1804/detection_ws/install -G Unix Makefiles

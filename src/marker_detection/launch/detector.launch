@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- marker parameters -->
+    <arg name="type" default="aruco" />
+    <arg name="id" default="1" />
+    <arg name="length" default="1" />
+    <arg name="width" default="1" />
+    <arg name="n" default="6" />
+    <arg name="m" default="6" />
+
+    <!-- start the detector node -->
+    <node name="marker_detector" pkg="marker_detection" type="$(arg type)_detector_node" output="screen"
+        args="--id $(arg id) --length $(arg length) --width $(arg width) --n $(arg n) --m $(arg m)">
+    </node>
+
+</launch>

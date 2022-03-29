@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- primary sensor launch script -->
+    <!-- Launches vision nodes for aruco marker detection -->
+
+    <!-- example tags to use -->
+    <!-- example: arg name="name" default="default" -->
+    <!-- example: env name="ENV_VAR" value="some_value" -->
+	 <!-- example conditional arg: -->
+    <!-- arg unless="bool_arg" name="name" value="some_value" -->
+    <!-- arg     if="bool arg" name="name" value="some_other_value" -->
+    <!-- node name="name" pkg="pkg" type="type_of_node" output="screen" args="any addtl args">
+    </node -->
+    <!-- include file="$(find pkg)/launch/node.launch">
+	<arg name="some_arg" value="some_value" />
+    </include -->
+
+    <!-- marker parameters -->
+    <arg name="type" default="aruco" />
+    <arg name="id" default="1" />
+    <arg name="length" default="1" />
+    <arg name="width" default="1" />
+    <arg name="n" default="6" />
+    <arg name="m" default="6" />
+
+    <include file="$(find marker_detection)/launch/detector.launch">
+	    <arg name="type" value="$(arg type)" />
+	    <arg name="id" value="$(arg id)" />
+	    <arg name="length" value="$(arg length)" />
+	    <arg name="width" value="$(arg width)" />
+	    <arg name="n" value="$(arg n)" />
+	    <arg name="m" value="$(arg m)" />
+    </include>
+
+</launch>
