@@ -88,7 +88,7 @@ public:
     std::vector<cv::Vec3d> rvecs, tvecs;
     
     // estimate pose from marker
-    cv::aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs); 
+    cv::aruco::estimatePoseSingleMarkers(markerCorners, 1.0, cameraMatrix, distCoeffs, rvecs, tvecs); 
 
 
     // Update GUI Window
