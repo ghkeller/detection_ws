@@ -96,7 +96,7 @@ public:
     for (int i = 0; i < rvecs.size(); ++i) {
         auto rvec = rvecs[i];
         auto tvec = tvecs[i];
-        cv::aruco::drawAxis(outputImage, cameraMatrix, distCoeffs, rvec, tvec, 0.1);
+        cv::aruco::drawAxis(outputImage, cameraMatrix, distCoeffs, rvec, tvec, 0.5);
 	
 	// Output the relative pose of the aruco marker 
 	rvec_msg_.x = rvecs[0][0];
