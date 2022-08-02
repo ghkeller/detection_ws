@@ -1,8 +1,0 @@
-prefix=/home/gordon_l1804/detection_ws/devel
-
-Name: marker_detection
-Description: Description of marker_detection
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
