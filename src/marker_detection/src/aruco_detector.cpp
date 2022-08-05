@@ -67,10 +67,10 @@ public:
     // run detection on the image
     cv::aruco::detectMarkers(cv_ptr->image, dictionary, markerCorners, markerIds, parameters, rejectedCandidates);
 
-    double f_x = 277.191356;
-    double f_y = 277.191356;
-    double c_x = 320.5;
-    double c_y = 240.5;
+    double f_x = 554.382713;
+    double f_y = 554.382713;
+    double c_x = 320;
+    double c_y = 240;
 
     double cMat[3][3] = {{f_x, 0, c_x},
 	    	   {0, f_y, c_y},
@@ -89,7 +89,6 @@ public:
     
     // estimate pose from marker
     cv::aruco::estimatePoseSingleMarkers(markerCorners, 1.0, cameraMatrix, distCoeffs, rvecs, tvecs); 
-
 
     // Update GUI Window
     cv::Mat outputImage = cv_ptr->image.clone();
